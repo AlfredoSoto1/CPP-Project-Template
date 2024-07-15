@@ -1,7 +1,3 @@
--- 
--- Build configurations
--- 
-
 filter "configurations:debug"
     runtime "debug"
     symbols "on"

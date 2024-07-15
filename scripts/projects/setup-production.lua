@@ -1,6 +1,6 @@
 -- Define project
-project "testing"
-    location (root.. "/projects/%{prj.name}")
+project "production"
+    location (root.. "projects/%{prj.name}")
     kind "ConsoleApp"
     language "C++"
     cppdialect "C++20"
@@ -44,4 +44,4 @@ project "testing"
         defines { "PLATFORM_LINUX" }
 
     -- Set default build configurations
-    include "build.lua"
+    include "../config/compiler-build.lua"

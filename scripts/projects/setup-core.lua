@@ -1,7 +1,7 @@
 -- Define project
-project "production"
+project "core"
     location (root.. "projects/%{prj.name}")
-    kind "ConsoleApp"
+    kind "StaticLib"
     language "C++"
     cppdialect "C++20"
 
@@ -24,12 +24,11 @@ project "production"
     includedirs {
         root.. "projects/%{prj.name}/src",
     }
+
     -- Lib directories
     libdirs {}
     -- Linking with
-    links {
-        "core"
-    }
+    links {}
     -- Project define-specific
     defines {}
 
@@ -44,4 +43,4 @@ project "production"
         defines { "PLATFORM_LINUX" }
 
     -- Set default build configurations
-    include "build.lua"
+    include "../config/compiler-build.lua"
